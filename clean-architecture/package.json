@@ -1,0 +1,19 @@
+{
+  "name": "clean-architecture",
+  "version": "1.0.0",
+  "description": "project to learn how to implement clean architecture",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+  "test": "vitest run",
+  "dev": "node --loader ts-node/esm main.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^24.10.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.7"
+  }
+}

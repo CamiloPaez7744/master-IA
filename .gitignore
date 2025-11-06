@@ -1,0 +1,61 @@
+# .gitignore para proyectos Node + TypeScript
+
+# Dependencias
+node_modules/
+
+# Salidas de construcción / artefactos
+dist/
+build/
+lib/
+out/
+*.tsbuildinfo
+tsconfig.tsbuildinfo
+
+# Cachés y caches de bundlers/monorepos
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+.svelte-kit/
+.turbo/
+.pnp/
+.pnp.js
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# Entornos / secretos
+.env
+.env.*.local
+!.env.example
+
+# Cobertura y resultados de tests
+coverage/
+.nyc_output/
+jest.config.ts
+test-results/
+reports/
+
+# IDEs / editores
+.vscode/
+.idea/
+.history/
+
+# S.O.
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Archivos temporales y de sistema
+*.tmp
+*.temp
+*.bak
+*.swp
+
+# Otros (Docker, lockfiles no ignorados)
+docker-compose.override.yml
+!.gitkeep
