@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { health } from '../../src/shared/health';
+import { health } from '@shared/health';
 
 describe('health()', () => {
   it('should return status "ok", a numeric uptime >= 0 and a valid ISO timestamp', () => {

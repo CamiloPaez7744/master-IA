@@ -5,15 +5,20 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-  "test": "vitest run",
-  "dev": "node --loader ts-node/esm main.ts"
+    "test": "vitest run",
+    "dev": "tsx --tsconfig tsconfig.json main.ts"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^24.10.0",
     "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "tsx": "^4.20.6",
     "typescript": "^5.9.3",
     "vitest": "^4.0.7"
+  },
+  "dependencies": {
+    "fastify": "^5.6.2"
   }
 }

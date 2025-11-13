@@ -16,7 +16,7 @@ export default defineConfig({
         '@domain': join(__dirname, 'src/domain'),
         '@application': join(__dirname, 'src/application'),
         '@infrastructure': join(__dirname, 'src/infrastructure'),
-        '@composition': join(__dirname, 'src/composition'),
+        '@composition': join(__dirname, 'src/infrastructure/composition'),
         '@shared': join(__dirname, 'src/shared'),
     }
   }

@@ -5,12 +5,19 @@
     "rootDir": ".",
     "outDir": "./dist",
     "baseUrl": ".",
+    "paths": {
+      "@domain/*": ["src/domain/*"],
+      "@application/*": ["src/application/*"],
+      "@infrastructure/*": ["src/infrastructure/*"],
+      "@shared/*": ["src/shared/*"],
+      "@composition/*": ["src/infrastructure/composition/*"]
+    },
 
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
-    "module": "nodenext",
-    "target": "es2022",
-    "moduleResolution": "nodenext",
+    "module": "ESNext",
+    "target": "ES2022",
+    "moduleResolution": "bundler",
     // For nodejs:
     // "lib": ["esnext"],
     "types": ["node"],
@@ -24,7 +31,6 @@
     // Stricter Typechecking Options
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
-    "allowImportingTsExtensions": true, 
     "noEmit": true,
 
     // Style Options
@@ -38,12 +44,11 @@
     // Recommended Options
     "strict": true,
     "jsx": "react-jsx",
-    "verbatimModuleSyntax": true,
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
   },
-  "include": ["src/**/*.ts", "main.ts"],
-  "exclude": ["node_modules", "dist", "tests"]
+  "include": ["src/**/*.ts", "main.ts", "tests/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
 }
