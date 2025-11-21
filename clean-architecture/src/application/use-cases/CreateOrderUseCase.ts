@@ -1,4 +1,4 @@
-import { Result, ok, fail } from '../../shared/Result';
+import { Result, ok, fail } from '@shared/Result';
 import { CreateOrderInput, CreateOrderOutput } from '../dtos/CreateOrderDTO';
 import { OrderRepository } from '../ports/OrderRepository';
 import { EventBus } from '../ports/EventBus';
@@ -7,10 +7,10 @@ import { AppError } from '../errors/AppError';
 import { ValidationError } from '../errors/ValidationError';
 import { ConflictError } from '../errors/ConflictError';
 import { InfraError } from '../errors/InfraError';
-import { Order } from '../../domain/entities/Order';
-import { OrderId } from '../../domain/value-objects/OrderId';
-import { CustomerId } from '../../domain/value-objects/CustomerId';
-import { Currency } from '../../domain/value-objects/Currency';
+import { Order } from '@domain/entities/Order';
+import { OrderId } from '@domain/value-objects/OrderId';
+import { CustomerId } from '@domain/value-objects/CustomerId';
+import { Currency } from '@domain/value-objects/Currency';
 
 /**
  * CreateOrderUseCase

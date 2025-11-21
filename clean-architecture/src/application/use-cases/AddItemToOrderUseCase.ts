@@ -1,4 +1,4 @@
-import { Result, ok, fail } from '../../shared/Result';
+import { Result, ok, fail } from '@shared/Result';
 import { AddItemToOrderInput, AddItemToOrderOutput } from '../dtos/AddItemToOrderDTO';
 import { OrderRepository } from '../ports/OrderRepository';
 import { PricingService } from '../ports/PricingService';
@@ -8,10 +8,10 @@ import { ValidationError } from '../errors/ValidationError';
 import { NotFoundError } from '../errors/NotFoundError';
 import { ConflictError } from '../errors/ConflictError';
 import { InfraError } from '../errors/InfraError';
-import { OrderId } from '../../domain/value-objects/OrderId';
-import { Sku } from '../../domain/value-objects/Sku';
-import { Quantity } from '../../domain/value-objects/Quantity';
-import { Currency } from '../../domain/value-objects/Currency';
+import { OrderId } from '@domain/value-objects/OrderId';
+import { Sku } from '@domain/value-objects/Sku';
+import { Quantity } from '@domain/value-objects/Quantity';
+import { Currency } from '@domain/value-objects/Currency';
 
 /**
  * AddItemToOrderUseCase
