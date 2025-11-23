@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(npx tsc:*)",
+      "Bash(npm run build:*)",
+      "Bash(timeout 5s npm run dev)",
+      "Bash(npm run test:*)",
+      "Bash(npm install)",
+      "Bash(npm install:*)",
+      "Bash(DATABASE_TYPE=memory npm run dev)",
+      "Bash(curl:*)",
+      "Bash(npm run dev:*)",
+      "Bash(psql:*)",
+      "Bash(docker exec:*)",
+      "Bash(docker ps:*)",
+      "Bash(npm run:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
