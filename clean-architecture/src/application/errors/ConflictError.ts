@@ -8,7 +8,7 @@ export class ConflictError extends Error {
   
   constructor(
     message: string,
-    public readonly conflictReason?: string,
+    public readonly code: string,
     public readonly details?: Record<string, unknown>
   ) {
     super(message);
