@@ -1,0 +1,28 @@
+{
+  "name": "monolith-to-distributed",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "db:up": "docker run --name pg-outbox -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=postgres -e POSTGRES_DB=outbox_db -p 5432:5432 -d postgres:15",
+    "db:log": "docker logs -f pg-outbox",
+    "db:migrate": "prisma migrate dev --name init",
+    "amqp:log": "docker logs -f rabbit-outbox",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "amqp:up": "docker run --name rabbit-outbox -p 5672:5672 -p 15672:15672 -d rabbitmq:3-management",
+    "container:rm": "docker rm -f pg-outbox rabbit-outbox",
+    "dev": "tsx watch src/main.ts",
+    "services:up": "docker-compose up -d"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@prisma/client": "^6.16.1",
+    "amqp": "^0.2.7",
+    "amqplib": "^0.10.9",
+    "prisma": "^6.16.1",
+    "tsx": "^4.20.5",
+    "uuid": "^13.0.0"
+  }
+}

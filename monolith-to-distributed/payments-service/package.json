@@ -1,0 +1,11 @@
+{
+  "name": "payments-service",
+  "type": "module",
+  "dependencies": {
+    "amqplib": "^0.10.9",
+    "tsx": "^4.20.5"
+  },
+  "scripts": {
+    "dev": "tsx watch consumer.ts"
+  }
+}
